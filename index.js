@@ -1,20 +1,25 @@
 
     function answer(){
-    let result = prompt ('Enter words'); 
-    console.log (result); 
-    
-    for (let newWords = 0; newWords < 2; newWords++){
-    newWords = prompt ('Enter words');
-    result = result + newWords;
-    console.log(result);
-    }    
 
+        while (true){
+            let result = prompt ('Enter words');
+            for (let words = 0; words < 3; words++){
+                words = prompt ('Enter words');
+                result = result+words;
+                console.log(result);
+            }  
+              
+            let question = confirm ('Сontinue or not?');
+            if (question === false){
+                break;
+            }
+
+        }
+    
 }
-do {
-    answer();
-    let question = confirm ('Сontinue or not?');
-} 
-while (question === false)
+
+answer();
+
 
 
     
